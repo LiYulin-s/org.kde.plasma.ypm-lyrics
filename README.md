@@ -1,11 +1,8 @@
 # Requirement
-Need to install the backend.
-
-
-
+Need to run the [backend](https://github.com/LiYulin-s/ypm-lyrics-backend) before use this Plasmoid.
 
 # Installation
-```
-$git clone https://github.com/LiYulin-s/org.kde.plasma.ypm-lyrics.git
-mv https://github.com/LiYulin-s/org.kde.plasma.ypm-lyrics.git ~/.local/share/plasma/plasmoid/
+```sh
+$ git clone https://github.com/LiYulin-s/org.kde.plasma.ypm-lyrics.git
+$ mv https://github.com/LiYulin-s/org.kde.plasma.ypm-lyrics ~/.local/share/plasma/plasmoid/
 ```

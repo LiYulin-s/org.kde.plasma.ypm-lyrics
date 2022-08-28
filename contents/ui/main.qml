@@ -15,7 +15,7 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.fullRepresentation: Item {
         property int current_id: 0
-        property string lyric: "null"
+        property string lyric: ""
         property bool trans: false
         Layout.preferredWidth: lyric_label.implicitWidth
         Layout.preferredHeight: lyric_label.implicitHeight
@@ -41,7 +41,7 @@ Item {
         }
         function update() {
             let xhr = new XMLHttpRequest()
-            xhr.open("GET", "http://127.0.0.1:5000/currentLyric/" + current_id)
+            xhr.open("GET", "http://localhost:5000/currentLyric/" + current_id)
             xhr.send()
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 || xhr.status === 200) {
