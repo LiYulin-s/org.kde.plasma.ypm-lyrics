@@ -18,11 +18,9 @@ Item {
         Label {
             id: lyric_label
             text: parent.lyric
-            //horizontalAlignment: horizontalCenter
-            //verticalAlignment: verticalCenter
             anchors.fill: parent
-            verticalAlignment: Text.AlignVCenter //垂直居中，控件必须有height才可以使用
-            horizontalAlignment: Text.AlignHCenter //水平居中，控件必须有width才可以使用
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
         }
 
         Timer {
@@ -40,16 +38,13 @@ Item {
             xhr.send()
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 || xhr.status === 200) {
-
                     //console.log("response:" + xhr.responseText)
-
                     let res = JSON.parse(xhr.responseText)
                     if (res.status === 404) {
                         lyric = ""
                         return
                     }
                     current_id = res.id
-
                     trans = res.trans
                     if (trans === true) {
                         lyric = res.lyric + ' ' + res.tlyric

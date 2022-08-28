@@ -7,7 +7,7 @@
             }
         ],
         "Category": "Utilities",
-        "Description": "Show lyrics when use Yesplaymusic",
+        "Description": "Show lyrics when using Yesplaymusic",
         "Description[zh_CN]": "在使用Yesplaymusic时显示歌词",
         "EnabledByDefault": true,
         "Icon": "applications-system",
