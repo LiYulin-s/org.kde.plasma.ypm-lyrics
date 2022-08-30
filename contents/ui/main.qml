@@ -21,6 +21,7 @@ Item {
             anchors.fill: parent
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
+            color: theme.textColor
         }
 
         Timer {
