@@ -38,11 +38,16 @@ PlasmoidItem {
             xhr.open("GET", "http://localhost:5000/currentLyric/" + current_id)
             xhr.send()
             xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 || xhr.status === 200) {
-                    //console.log("response:" + xhr.responseText)
+              if (xhr.readyState === 4 )  {
+                if (xhr.status === 200) {
+                    console.log("response:" + xhr.responseText)
                     let res = JSON.parse(xhr.responseText)
                     if (res.status === 404) {
                         lyric = ""
+                        return
+                    }
+                    if (res.status === 414) {
+                        lyric = res.lyric
                         return
                     }
                     current_id = res.id
@@ -52,8 +57,9 @@ PlasmoidItem {
                     } else {
                         lyric = res.lyric
                     }
+                  }
                 }
-               // console.log(lyric_label.implicitWidth)
+               //console.log(lyric_label.implicitWidth)
             }
         }
     }
