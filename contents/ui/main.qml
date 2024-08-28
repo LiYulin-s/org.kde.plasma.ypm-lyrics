@@ -40,17 +40,13 @@ PlasmoidItem {
             xhr.onreadystatechange = function () {
               if (xhr.readyState === 4 )  {
                 if (xhr.status === 200) {
-                    console.log("response:" + xhr.responseText)
+                    //console.log("response:" + xhr.responseText)
                     let res = JSON.parse(xhr.responseText)
                     if (res.status === 404) {
                         lyric = ""
                         return
                     }
-                    if (res.status === 414) {
-                        lyric = res.lyric
-                        return
-                    }
-                    current_id = res.id
+                    current_id = "1"
                     trans = res.trans
                     if (trans === true) {
                         lyric = res.lyric + ' ' + res.tlyric
