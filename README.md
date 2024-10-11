@@ -1,3 +1,6 @@
+# Notice
+Now we recommend you to use this [repo](https://github.com/zsiothsu/org.kde.plasma.yesplaymusic-lyrics).
+
 # Requirement
 Need to run the [backend](https://github.com/LiYulin-s/ypm-lyrics-backend) before use this Plasmoid.
 
